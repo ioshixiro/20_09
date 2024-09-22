@@ -1,0 +1,30 @@
+.sales_catalog{
+    width: 90vw;
+    margin: 0 auto;
+    @include flex(center, center, column);
+    margin-block: 50px;
+    gap: 50px;
+
+    ul{
+        width: 100%;
+        @include flex(space-between);
+        flex-wrap: wrap;
+
+        li{
+            @include flex;
+            gap: 5px;
+
+            img{
+                height: 20px;
+                cursor: pointer;
+            }
+
+            p{
+                font-weight: 500;
+                font-size: 15px;
+                text-align: center;
+                color: #3b3c3f;
+            }
+        }
+    }
+}

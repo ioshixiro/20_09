@@ -1,0 +1,98 @@
+.swiper-container {
+    width: 100vw;
+    padding-top: 119px;
+    margin: 0 auto;
+    overflow-x: hidden;
+
+    .swiper-wrapper{
+        width: 100vw;
+    }
+    
+    .swiper-slide {
+        height: 500px;
+        position: relative;
+        text-align: center;
+        font-size: 18px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+        
+        .text-overlay {
+            @include flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 2;
+            color: white;
+            gap: 20px;
+            
+            h1 {
+                font-weight: 700;
+                font-size: 48px;
+                color: #2c333d;
+            }
+            
+            p {
+                font-weight: 400;
+                font-size: 17px;
+                color: #2c333d;
+            }
+
+            a button{
+                border-radius: 8px;
+                width: 220px;
+                height: 62px;
+                background: #011120;
+                border: 1px solid black;
+                @include flex;
+
+                font-weight: 700;
+                font-size: 13px;
+                text-align: center;
+                color: #fff;
+
+                &:hover{
+                    background-color: #fff;
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1216px) {
+    .swiper-container {
+        padding-top: 166px;
+    }
+}
+
+@media (max-width: 570px) {
+    .text-overlay {
+        padding-top: 220px;
+        
+        h1{
+            font-size: 8.4vw !important;
+        }
+    }
+}
+
+@media (max-width: 455px) {
+    .text-overlay {
+        padding-top: 166px;
+
+        p{
+            font-size: 4vw !important;
+        }
+    }
+}

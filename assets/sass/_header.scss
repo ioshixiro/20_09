@@ -1,0 +1,272 @@
+header{
+    width: 100vw;
+    @include flex(center, center, column);
+    position: fixed;
+    z-index: 1000;
+    padding-bottom: 2px;
+    backdrop-filter: blur(40px);
+    background-color: #ffffffae;
+
+    .header_top{
+        width: 100vw;
+        border-bottom: 1px solid #ebeef0;
+        @include flex;
+
+        .header_box{
+            width: 90vw;
+            height: 50px;
+            @include flex(space-between);
+
+            #header_links_switch{
+                display: none;
+                img{
+                    height: 32px;
+                }
+            }
+            #header_links_control{
+                display: none;
+            }
+
+            .header_links{
+                @include flex;
+                height: 100%;
+                gap: 25px;  
+
+                li a{
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: #6c6f71;
+                }
+            }
+
+            .header_nav{
+                @include flex;
+                height: 32px;
+                gap: 25px;
+
+                li{
+                    p{
+                        font-weight: 400;
+                        font-size: 13px;
+                        color: #4e5760;
+                    }
+                    h3{
+                        font-weight: 500;
+                        font-size: 16px;
+                        color: #000;
+                    }
+                    button{
+                        @include flex;
+                        border: 1px solid #f2f6fc;
+                        border-radius: 4px;
+                        width: 134px;
+                        height: 32px;
+                        background: #f2f6fc;
+
+                        font-weight: 700;
+                        font-size: 11px;
+                        color: #2a5e8d;
+
+                        &:hover{
+                            background-color: transparent;
+                            border-color: #2a5e8d;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .header_bottom{
+        width: 90vw;    
+        display: flex;  
+        margin-top: 4px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+
+        
+        .header_bottom_nn{
+            @include flex;
+            align-items: center;
+            gap: 25px;
+
+            #header_main_icon{
+                height: 50px;
+            }  
+            
+            button{
+                border-radius: 8px;
+                padding: 16px 29px;
+                width: 154px;
+                height: 52px;
+                background: #186fd4;
+                border: 2px solid #186fd4;
+                
+                font-weight: 700;
+                font-size: 13px;
+                color: #fff;
+                
+                &:hover{
+                    color: #186fd4;
+                    background-color: transparent;
+                }
+            }
+        }
+            
+        #header_options_control,
+        #header_options_switch{
+            display: none;
+        }
+
+        .header_search_box{
+            @include flex;
+            height: 50px;
+            background-color: #186fd4;
+            border-radius: 6px;
+            gap: 0;
+            
+            input{
+                min-width: 250px;
+                border-radius: 6px;
+                height: 50px;
+                border: 2px solid #186fd4;
+                
+                &:focus{
+                    outline: 0px;
+
+                }
+            }
+
+            a button{
+                border-radius: 6px;
+                height: 50px;
+                width: 49px;
+                @include flex;
+                background-color: #186fd4;
+                border: none;
+            }
+        }
+
+        .header_options{
+            @include flex;
+            gap: 25px;
+        }
+    }
+}
+
+@media(max-width: 1305px){
+    .header_top .header_box{
+        #header_links_switch{
+            display: block !important;
+        }
+
+        .header_links{
+            width: 50vw;
+            min-width: 280px;
+            height: 100vh !important;
+            position: absolute;
+            top: 51px;
+            left: -100%;
+            display: flex;
+            flex-direction: column !important;
+            transition: 0.3s;
+            background-color: #fff !important;
+            z-index: 1001;
+        }
+
+        #header_links_control:checked ~ .header_links{
+            left: 0;
+        }
+    }
+
+    .header_bottom{
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width: 812px){
+    .header_bottom{
+        
+        .header_bottom_nn,
+        .header_search_box,
+        .header_options{
+            margin: 0 auto;
+
+        }
+    }
+}
+
+@media(max-width: 455px){
+    .header_bottom{
+        gap: 10px !important;
+
+        #header_options_switch{
+            display: flex !important;
+            grid-column-start: 2;
+            grid-row-start: 1;
+            justify-content: end !important;
+
+            img{
+                height: 50px !important;
+            }
+        }
+
+        .header_options{
+            box-shadow: 0px 0px 3px .05px rgba(130, 130, 130, 0.75);
+            position: absolute;
+            padding: 20px;
+            top: 183px;
+            right: -100%;
+            display: flex;
+            flex-direction: column !important;
+            transition: 0.3s;
+            background-color: #fff;
+            z-index: 1000;
+        }
+
+        #header_options_control:checked ~ .header_options{
+            right: 5vw;
+        }
+    }
+}
+
+@media(max-width: 605px){
+    .header_nav{
+        li p{
+            display: none;
+        }
+    }
+}
+
+@media(max-width: 380px){
+    .header_nav li h3{
+        display: none;
+    }
+}
+
+@media(max-width: 425px){
+    .header_bottom{
+
+        .header_bottom_nn{
+            gap: 16px !important;
+            justify-content: space-between !important;
+
+            #header_main_icon{
+                width: 47vw;
+            }
+            a button{
+                width: 36vw;
+            }
+        }
+        .header_search_box{
+            input{
+                width: 145px !important;
+                min-width: 0px !important;
+            }
+        }
+        #header_links_switch{
+            width: 9.7vw !important;
+        }
+    }
+}

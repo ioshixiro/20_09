@@ -1,0 +1,12 @@
+.sales_items{
+    width: 90vw;
+    margin-block: 50px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 185px);
+    gap: 20px;
+    justify-content: space-evenly;
+
+
+}
+

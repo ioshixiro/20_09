@@ -1,0 +1,14 @@
+.actions_holder{
+    width: 90vw;
+    margin-block: 50px !important;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 230px);
+    justify-content: space-between;
+    place-items: center;
+    gap: 10px;
+
+    .grid-item img{
+        width: 230px;
+    }
+}

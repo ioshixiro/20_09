@@ -1,0 +1,117 @@
+.top_sales{
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: column;
+    gap: 30px;
+
+    h1{
+        font-size: 33px;
+        font-weight: 700;
+        line-height: 31px;
+    }
+
+    .top_sales_types{
+        gap: 10px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: baseline;
+
+        a button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 119px;
+            height: 45px;
+            border-radius: 6px;
+            border: 1px solid #f2f4f5;
+            background-color: #fff;
+            font-weight: 500;
+            font-size: 14px;
+            color: #5b5b5c;
+            
+            &:hover{
+                color: #117fe3;
+                background: #f6f8fb;
+            }
+        }
+    }
+
+    .top_sales_items{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        align-items: center;
+        gap: 20px;
+
+        .top_sales_item{
+            width: 240px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: baseline;
+            gap: 5px;
+            padding: 10px;
+            border: 1px solid transparent;
+
+            #xit_img{
+                width: 37px;
+            }
+
+            .top_sales_main_img{
+                width: 100%;
+            }
+
+            p{
+                font-weight: 400;
+                font-size: 13px;
+                color: #a8adb2;
+            }
+
+            h2{
+                font-weight: 500;
+                font-size: 18px;
+                color: #000;
+            }
+
+            h4{
+                span{
+                    font-weight: 400;
+                    font-size: 15px;
+                    color: #8f9296;
+                }
+                font-weight: 500;
+                font-size: 20px;
+                color: #003b73;
+            }
+
+            .top_sales_buy_btn{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+
+                a button{
+                    border-radius: 6px;
+                    width: 120px;
+                    height: 40px;
+                    background: #186fd4;
+                    font-weight: 500;
+                    font-size: 15px;
+                    color: #fff;
+                    border: 1px solid #186fd4;
+                }
+            }
+
+            &:hover{
+                border: 1px solid #186fd4;
+                border-radius: 12px;
+            }
+        }
+    }
+}
